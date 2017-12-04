@@ -750,6 +750,7 @@ animation:fadeIn 10s infinite;
   position: relative; /*-- absolute;--*/
   top: 50%;
   /*-- left: 10%; --*/
+  text-align: center;
   -webkit-transform: translate(0%, 50%);
   -moz-transform: translate(0%, 50%);
   -ms-transform: translate(0%, 50%);
