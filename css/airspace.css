@@ -708,7 +708,6 @@ animation:fadeIn 10s infinite;
   position: absolute; /*-- absolute;--*/
   margin: auto;		
   top: 50%; left: 0; bottom: 0; right: 0;	
-  text-align: center;
   /*--
   top: 50%;
   text-align: center;
@@ -753,10 +752,9 @@ animation:fadeIn 10s infinite;
   text-align: center;
 }
 #portfolio-work .block .portfolio-contant .position-center {
-  position: absolute; /*-- absolute;--*/
-  margin: auto;		
-  top: 50%; left: 0; bottom: 0; right: 0;	
-  text-align: center;
+  position: relative; /*-- absolute;--*/
+  top: -50%;
+  margin: 0 auto;
   /*--
   top: 50%;
   text-align: center;
