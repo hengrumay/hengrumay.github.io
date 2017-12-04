@@ -707,7 +707,7 @@ animation:fadeIn 10s infinite;
 #portfolio-work .block .portfolio-contant ul li:hover .position-center {
   position: absolute; /*-- absolute;--*/
   margin: auto;		
-  top: 0; left: 0; bottom: 0; right: 0;	
+  top: 50%; left: 0; bottom: 0; right: 0;	
   text-align: center;
   /*--
   top: 50%;
@@ -755,7 +755,7 @@ animation:fadeIn 10s infinite;
 #portfolio-work .block .portfolio-contant .position-center {
   position: absolute; /*-- absolute;--*/
   margin: auto;		
-  top: 0; left: 0; bottom: 0; right: 0;	
+  top: 50%; left: 0; bottom: 0; right: 0;	
   text-align: center;
   /*--
   top: 50%;
