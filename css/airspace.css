@@ -705,7 +705,7 @@ animation:fadeIn 10s infinite;
   opacity: 1;
 }
 #portfolio-work .block .portfolio-contant ul li:hover .position-center {
-  position: absolute; /*-- absolute;--*/
+  position: relative; /*-- absolute;--*/
   top: 50%;
   /*--text-align: center;--*/
   -webkit-transform: translate(0%, -50%);
