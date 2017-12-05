@@ -29,11 +29,11 @@ and some of the my collaborative research are published in the following scienti
 <li>  [Neural mechanisms of movement speed and tau as revealed by magnetoencephalography](https://dx.doi.org/10.1007/s00221-009-1822-5)</li>
 <li>  [Neural representation of movement tau](https://www.era.lib.ed.ac.uk/handle/1842/2675)</li>
 <li>  [Unilaterally applied stimuli in a frequency discrimination task are represented bilaterally in primary somatosensory cortex](https://www.scopus.com/record/display.uri?eid=2-s2.0-29144504105&origin=inward&txGid=c8973b6fd64ec1ef8fa14ca4302e915c)</li>
-<li>  [The musician's brain: functional imaging of amateurs and professionals during performance and imagery](https://doi.org/10.1016/j.neuroimage.2003.07.018)</li>
+<li>  [The musician's brain: functional imaging of amateurs and professionals during performance and imagery](https://doi.org/10.1016/j.neuroimage.2003.07.018)</li>     
 
 
-For those who are more familiar with academic referencing:     
-- [ORCID](http://orcid.org/0000-0003-2109-0781)   
+For those who are more familiar with academic referencing:        
+- [ORCID](http://orcid.org/0000-0003-2109-0781)     
 - [google scholar](https://scholar.google.com/citations?user=dYvmLyMAAAAJ&hl=en)  
 
 -----
