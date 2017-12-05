@@ -13,7 +13,7 @@ like:
 <li> How does brain activity change as we age, or when we become (mentally|neurologically) ill? </li>
 <li> etc. </li>
 
-These are the kinds of questions that fellow scientist colleagues in the world and I studied using neuroimaging, signal analyses, and machine learning techniques.  
+These are the kinds of questions that fellow scientist colleagues in the world and I study using neuroimaging, signal analyses, and machine learning techniques.  
 
 Some of the my collaborative research are published in the following scientific articles:   
 
