@@ -3,7 +3,7 @@
 The technique I specialized in is called [magnetoencephalography (MEG)](http://megcommunity.org/what-is-meg), 
 which picks up the magnetic field of the electrical brain signals at milliseconds time frequency.   
 When these elecromagnetic brain signals are combined with brain anatomical images obtained through 
-[magnetic resonance imaging (MRI)](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging) 
+[magnetic resonance imaging (MRI)](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging), 
 one can really go further in their investigations as well as computational analyses to study and estimate solutions to questions 
 like: 
 <li> Where is the source of the measured brain signals? </li>
@@ -13,8 +13,7 @@ like:
 <li> How does brain activity change as we age, or when we become mentally ill? </li>
 <li> etc. </li>
 
-These are the kinds of investigations that scientist and colleagues in the world and I worked on.  
-
+These are the kinds of questions that fellow scientist colleagues in the world and I studied using neuroimaging, signal analyses, and machine learning techniques.  
 
 Some of the my collaborative research are published in the following scientific articles:   
 
