@@ -4,7 +4,7 @@ The technique I specialized in is called [magnetoencephalography (MEG)](http://m
 which picks up the magnetic field of the electrical brain signals at milliseconds time frequency.   
 When these elecromagnetic brain signals are combined with brain anatomical images obtained through 
 [magnetic resonance imaging (MRI)](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging) 
-one can really go further in their investigations as well as computational analyses to ask and estimate solutions to questions 
+one can really go further in their investigations as well as computational analyses to study and estimate solutions to questions 
 like: 
 <li> Where is the source of the measured brain signals? </li>
 <li> How do different parts of the brain communicate with with other?</li>
