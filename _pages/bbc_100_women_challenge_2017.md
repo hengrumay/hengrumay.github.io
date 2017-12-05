@@ -6,9 +6,9 @@ Most recently I contributed remotely to the [BBC 100 Women's Challenge building 
 
 #### [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
 
-<div>
+<!--div>
   <iframe width="400" height="500" frameborder="0" src="http://www.bbc.com/news/av/embed/p05j79qx/41531054" allowfullscreen></iframe>
-</div>
+</div-->
 
 {% include bbc100wmDEMO.html %}   
         
