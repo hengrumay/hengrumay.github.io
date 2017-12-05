@@ -8,9 +8,9 @@ one can really go further in their investigations as well as computational analy
 like: 
 <li> Where is the source of the measured brain signals? </li>
 <li> How do different parts of the brain communicate with with other?</li>
-<li> How do brain signals modulate with perception and action (cognitive) processes?</li> 
+<li> How do brain signals modulate with perception and action?</li> 
 <li> Can we use brain signals to predict future behaviour?</li> 
-<li> How does brain activity change as we age, or when we become mentally ill? </li>
+<li> How does brain activity change as we age, or when we become (mentally|neurologically) ill? </li>
 <li> etc. </li>
 
 These are the kinds of questions that fellow scientist colleagues in the world and I studied using neuroimaging, signal analyses, and machine learning techniques.  
