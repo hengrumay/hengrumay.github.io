@@ -9,11 +9,11 @@ When these elecromagnetic brain signals are combined with brain anatomical image
 [magnetic resonance imaging (MRI)](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging) 
 one can really go further in their investigations as well as computational analyses to ask and estimate solutions to questions 
 like: 
-  - Where is the source of the measured brain signals? 
-  - How do different parts of the brain communicate with with other?
-  - How do brain signals modulate with perception and action (cognitive) processes? 
-  - Can we use brain signals to predict future behaviour? 
-  - etc. 
+  -- Where is the source of the measured brain signals? 
+  -- How do different parts of the brain communicate with with other?
+  -- How do brain signals modulate with perception and action (cognitive) processes? 
+  -- Can we use brain signals to predict future behaviour? 
+  -- etc. 
 
 These are the kinds of investigations I and other scientist colleagues in the world worked on
 and some of the my collaborative research are published in the following scientific articles:
@@ -21,7 +21,7 @@ and some of the my collaborative research are published in the following scienti
 ###### Methodology | Reliability: 
 - [MEG sensor and source measures of visually induced gamma-band oscillations are highly reliable](https://doi.org/10.1016/j.neuroimage.2016.05.006)
 - [MEG—measured auditory steady-state oscillations show high test–retest reliability: A sensor and source-space analysis](https://doi.org/10.1016/j.neuroimage.2015.07.055)
-- []()
+- [High-frequency neural oscillations and visual processing deficits in schizophrenia](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00621/full)
 - [Gearing up for action: Attentive tracking dynamically tunes sensory and motor oscillations in the alpha and beta band](https://doi.org/10.1016/j.neuroimage.2013.04.120)
 - []()
 - []()
