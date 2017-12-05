@@ -16,8 +16,8 @@ These are the kinds of investigations I and other scientist colleagues in the wo
 and some of the my collaborative research are published in the following scientific articles:
 
 ##### Methodology | Reliability: 
-- -[MEG sensor and source measures of visually induced gamma-band oscillations are highly reliable](https://doi.org/10.1016/j.neuroimage.2016.05.006)
-- -[MEG—measured auditory steady-state oscillations show high test–retest reliability: A sensor and source-space analysis](https://doi.org/10.1016/j.neuroimage.2015.07.055)    
+- - [MEG sensor and source measures of visually induced gamma-band oscillations are highly reliable](https://doi.org/10.1016/j.neuroimage.2016.05.006)
+- - [MEG—measured auditory steady-state oscillations show high test–retest reliability: A sensor and source-space analysis](https://doi.org/10.1016/j.neuroimage.2015.07.055)    
 
 ##### Clinical:   
 - [The synchronous neural interactions test as a functional neuromarker for post-traumatic stress disorder (PTSD): a robust classification method based on the bootstrap](http://iopscience.iop.org/article/10.1088/1741-2560/7/1/016011)
