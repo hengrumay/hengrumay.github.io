@@ -10,6 +10,7 @@ like:
 <li> How do different parts of the brain communicate with with other?</li>
 <li> How do brain signals modulate with perception and action (cognitive) processes?</li> 
 <li> Can we use brain signals to predict future behaviour?</li> 
+<li> How does brain activity change as we age, or when we become mentally ill? </li>
 <li> etc. </li>
 
 These are the kinds of investigations I and other scientist colleagues in the world worked on
