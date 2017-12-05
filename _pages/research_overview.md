@@ -1,5 +1,5 @@
 #### As a neuroimaging scientist (neuroscientist)...
-[I study brain signals in both health and disorder](https://github.com/hengrumay/brain_dances).   
+[I studied brain signals in both health and disorder](https://github.com/hengrumay/brain_dances).   
 The neuroimaging technique I specialized in is called [magnetoencephalography (MEG)](http://megcommunity.org/what-is-meg).    
 It uses the non-invasive MEG imaging system, which records the magnetic fields of the electrical brain signals at milliseconds time frequency.   
 When these elecromagnetic brain signals are combined with brain anatomical images obtained through 
