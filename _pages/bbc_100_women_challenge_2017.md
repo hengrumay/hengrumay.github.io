@@ -10,7 +10,7 @@ Most recently I contributed remotely to the [BBC 100 Women's Challenge building 
   <iframe width="400" height="500" frameborder="0" src="http://www.bbc.com/news/av/embed/p05j79qx/41531054" allowfullscreen></iframe>
 </div>
 
-#### [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final challenge day reveal  
+#### [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions reveal  
 
 #### Documentary Broadcast: Aired on BBC World News TV over the weekend of 18/19th Nov 2017
  
