@@ -9,11 +9,11 @@ When these elecromagnetic brain signals are combined with brain anatomical image
 [magnetic resonance imaging (MRI)](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging) 
 one can really go further in their investigations as well as computational analyses to ask and estimate solutions to questions 
 like: 
-    - Where is the source of the measured brain signals? 
-    - How do different parts of the brain communicate with with other?
-    - How do brain signals modulate with perception and action (cognitive) processes? 
-    - Can we use brain signals to predict future behaviour? 
-    - etc. 
+- Where is the source of the measured brain signals? 
+- How do different parts of the brain communicate with with other?
+- How do brain signals modulate with perception and action (cognitive) processes? 
+- Can we use brain signals to predict future behaviour? 
+- etc. 
 
 These are the kinds of investigations I and other scientist colleagues in the world worked on
 and some of the my collaborative research are published in the following scientific articles:
