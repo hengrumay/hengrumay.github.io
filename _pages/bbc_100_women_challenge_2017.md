@@ -6,14 +6,14 @@ Most recently I contributed remotely from Denver, CO, to the [BBC 100 Women Chal
 
 We used a combination of speech recognition and natural language processing, together with requisite data extraction, transformation, and web application development to create this proof-of-concept *gender-neutral* app within ~3 intense days. The fun and comaraderie made the experience truly memorable!   
 
+Here are some highlights: 
 
-
-#### [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
+#### i) [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
 click to watch demo @ BBC World   [![Demo-video](https://hengrumay.github.io/img/projects/bbc100women_all-ai_appDemo.png)](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings)
 
-#### [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions revealed at Facebook-HQ in SF  
+#### ii) [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions revealed at Facebook-HQ in SF  
 
-#### Documentary Broadcast: Aired on BBC World News TV over the weekend of 18/19th Nov 2017
+#### iii) Documentary Broadcast: Aired on BBC World News TV over the weekend of 18/19th Nov 2017
  
 
 
