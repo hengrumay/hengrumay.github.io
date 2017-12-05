@@ -1,10 +1,8 @@
 #### What I did as a neuroimaging scientist...
 
-As a neuroimaging scientist (neuroscientist) [I studied brain signals in both health and disorder](https://github.com/hengrumay/brain_dances). 
-
+As a neuroimaging scientist (neuroscientist) [I studied brain signals in both health and disorder](https://github.com/hengrumay/brain_dances).   
 The technique I specialized in is called [magnetoencephalography (MEG)](http://megcommunity.org/what-is-meg), 
-which picks up the magnetic field of the electrical brain signals at milliseconds time frequency. 
-
+which picks up the magnetic field of the electrical brain signals at milliseconds time frequency.   
 When these elecromagnetic brain signals are combined with brain anatomical images obtained through 
 [magnetic resonance imaging (MRI)](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging) 
 one can really go further in their investigations as well as computational analyses to ask and estimate solutions to questions 
