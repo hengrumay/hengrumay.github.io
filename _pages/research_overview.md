@@ -1,4 +1,4 @@
-### What I did as a neuroimaging scientist...
+##### What I did as a neuroimaging scientist...
 
 As a neuroimaging scientist (neuroscientist) [I studied brain signals in both health and disorder](https://github.com/hengrumay/brain_dances). 
 
@@ -18,9 +18,9 @@ like:
 These are the kinds of investigations I and other scientist colleagues in the world worked on
 and some of the my collaborative research are published in the following scientific articles:
 
-#### Methodology | Reliability: 
+###### Methodology | Reliability: 
 - [MEG sensor and source measures of visually induced gamma-band oscillations are highly reliable](https://doi.org/10.1016/j.neuroimage.2016.05.006)
-- []()
+- [MEG—measured auditory steady-state oscillations show high test–retest reliability: A sensor and source-space analysis](https://doi.org/10.1016/j.neuroimage.2015.07.055)
 - []()
 - []()
 - []()
