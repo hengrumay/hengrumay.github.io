@@ -10,13 +10,7 @@ Most recently I contributed remotely to the [BBC 100 Women's Challenge building 
   <iframe width="400" height="500" frameborder="0" src="http://www.bbc.com/news/av/embed/p05j79qx/41531054" allowfullscreen></iframe>
 </div>
 
-<!--
-<div id="fh5co-services" data-section="Features">
-			<!--div class="fh5co-video"><a href="https://vimeo.com/242419413" class="popup-vimeo"><i class="icon-play2"></i></a> <span>Watch video</span></div> -->
-			<div class="fh5co-video"><a href="http://www.bbc.com/news/av/embed/p05j79qx/41531054" class="popup-vimeo"><i class="icon-play2"></i></a> <span>Watch video</span></div>
-			<!-- <iframe width="400" height="500" frameborder="0" src="http://www.bbc.com/news/av/embed/p05j79qx/41531054"></iframe> -->
-			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
--->      
+{% include bbc100wmDEMO.html %}   
         
 #### [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions reveal  
 
