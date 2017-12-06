@@ -15,7 +15,7 @@ like:
 
 These are the kinds of questions that fellow scientist colleagues in the world and I study using neuroimaging, signal analyses, and machine learning techniques.  
 
-Some of the my collaborative research are published in the following scientific articles:   
+Some of my collaborative research are published in the following scientific articles:   
 
 ##### Methodology | Reliability: 
 - -[MEG sensor and source measures of visually induced gamma-band oscillations are highly reliable](https://doi.org/10.1016/j.neuroimage.2016.05.006)
