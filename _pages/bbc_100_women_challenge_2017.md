@@ -1,4 +1,4 @@
-#### BBC 100 Women's Challenge
+#### BBC 100 Women Challenge
 
 I have always been interested in using technology, data, and science in meaningful ways as well as contributing to social good =) 
 
