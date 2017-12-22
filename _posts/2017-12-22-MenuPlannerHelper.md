@@ -5,5 +5,5 @@ subtitle: A Recipe-Diffficulty-Tagger and the MenuPlannerHelper App to the rescu
 date: 2017-12-22 16:11:27
 author: H-RM Merkle-Tan
 comments: true
-published: false
+published: true
 ---
