@@ -134,16 +134,16 @@ Apart from classifying recipes for their difficulty, I was also interested in pr
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
 
 <!-- <video controls width="800" height="600" align="center">
-	<source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mov" type="video/mp4">
+	<source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mp4" type="video/mp4">
   <!--<source src="videos/real-estate.mp4" type="video/mp4">-->
   <!--<source src="videos/real-estate.ogv" type="video/ogg">-->
 <!-- </video> -->
 
-<center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> 
+<!-- <center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> -->
 
-<!--[![](file:///Users/hrm/Dropbox/RecentProjects/DataStories_github_io/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)* 
+[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)* 
 < TRY to embed demo video > 
-</center> -->  
+</center>  
 
 <br>
 
