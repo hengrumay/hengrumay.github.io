@@ -52,9 +52,9 @@ Interestingly, as I sifted through various sources of recipes the information ab
 -	Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
 
 ### -- TOPIC-MODELING
--	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->. --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)[^LDA].<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
+-	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->. --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
 
--  The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet^(Dir) prior \\(Dir_a)\\), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior \\(Dir_b)\\). 
+-  The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet<sup>Dir</sup> prior \\(Dir_a)\\), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior \\(Dir_b)\\). 
 > ### LDA assumption: generated documents consist of distributions of topics, which are distributions of words. 
 
 -	<!--This process describes a generative model wherein--> This means that for any given observed collection of documents, we are trying to infer the latent variables ***i) the probability of words being used for each topic –-- a word-topic association,*** and ***ii) the probability of each topic appearing in each document –-- a topic—document association*** based on observed variables; the vocabulary itself. The inference process is typically derived through [Gibbs sampling](https://en.wikipedia.org/wiki/Gibbs_sampling), <!--an implementation of Markov Chain Monte-Carlo algorithm, -->or formulated as an optimization problem using [variational inference](https://ermongroup.github.io/cs228-notes/inference/variational/), and tuning the two hyper-parameters \\(a\\) and \\(b\\) which regulate the prior distributions. 
@@ -101,7 +101,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 
 
 ### --	TESTING-VALIDATING
--	To address the uneven proportion^sample-issue of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
+-	To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
 -	To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
 -	The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):   
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: *Precision and Recall, illustrated -- credit: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg)* </center>
@@ -174,9 +174,9 @@ Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serv
 
 ### ROOM for IMPROVEMENTs in data and modeling pipelines:
 
-*	The [issue of unbalanced class proportion](https://svds.com/learning-imbalanced-classes/) and modeling could be further assessed with [stratified k-fold cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html) on the training data, adapting the data resampling with bootstrap aggregating (‘bagging’), or indeed adjusting the class-weights.
+*	The [issue of unbalanced class proportion](https://svds.com/learning-imbalanced-classes/)<sup>sample-issue</sup> and modeling could be further assessed with [stratified k-fold cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html) on the training data, adapting the data resampling with bootstrap aggregating (‘bagging’), or indeed adjusting the class-weights.
 
-* Using a more objective way [to select the number of topics in the topic-modeling](http://ellisp.github.io/blog/2017/01/05/topic-model-cv)^Ntopics , as well as other ways of defining relevant recipe features from recipe instructions e.g. context of words maybe useful and [word2vec](https://arxiv.org/pdf/1310.4546.pdf)<!--(http://adventuresinmachinelearning.com/word2vec-keras-tutorial/)--> may help with finding these.
+* Using a more objective way [to select the number of topics in the topic-modeling](http://ellisp.github.io/blog/2017/01/05/topic-model-cv)<sup>Ntopics</sup> , as well as other ways of defining relevant recipe features from recipe instructions e.g. context of words maybe useful and [word2vec](https://arxiv.org/pdf/1310.4546.pdf)<!--(http://adventuresinmachinelearning.com/word2vec-keras-tutorial/)--> may help with finding these.
 
 <br>
 I look forward to trying out some of these ideas and sharing updates on another occasion. 
@@ -199,15 +199,15 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 ====  
 ##### _FOOTNOTES:_ 
 
-**[^LDA]:** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
+**<sup>LDA:</sup>** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
 
-**^(Dir)** The "Dirichlet" distribution describes a distribution of distributions.
+**<sup>Dir:</sup>** The "Dirichlet" distribution describes a distribution of distributions.
 
-**^Ntopics** A more objective way to determine the 'optimal' number of topics for a corpus of documents is through cross-validating a model's [perplexity](https://en.wikipedia.org/wiki/Perplexity) -- *the measure of how well a probability model predicts a data sample*. An overview of [applying this heuristic](https://doi.org/10.1186/1471-2105-16-S13-S8) using the [ldatuning R package](https://cran.r-project.org/web/packages/ldatuning/index.html) is given [here](http://ellisp.github.io/blog/2017/01/05/topic-model-cv), and a tutorial using the [Text Mining and Topic Modeling Toolkit for Python](https://github.com/WZBSocialScienceCenter/tmtoolkit) can be found [here](https://datascience.blog.wzb.eu/2017/11/09/topic-modeling-evaluation-in-python-with-tmtoolkit/)  
+**<sup>Ntopics:</sup>** A more objective way to determine the 'optimal' number of topics for a corpus of documents is through cross-validating a model's [perplexity](https://en.wikipedia.org/wiki/Perplexity) -- *the measure of how well a probability model predicts a data sample*. An overview of [applying this heuristic](https://doi.org/10.1186/1471-2105-16-S13-S8) using the [ldatuning R package](https://cran.r-project.org/web/packages/ldatuning/index.html) is given [here](http://ellisp.github.io/blog/2017/01/05/topic-model-cv), and a tutorial using the [Text Mining and Topic Modeling Toolkit for Python](https://github.com/WZBSocialScienceCenter/tmtoolkit) can be found [here](https://datascience.blog.wzb.eu/2017/11/09/topic-modeling-evaluation-in-python-with-tmtoolkit/)  
 
-**^sample-issue** Some heuristics: [on how to deal with imbalanced data](https://svds.com/learning-imbalanced-classes/) and [on the 'right' way to oversample](https://beckernick.github.io/oversampling-modeling/) for predictive modeling.
+**<sup>sample-issue:</sup>** Some heuristics: [on how to deal with imbalanced data](https://svds.com/learning-imbalanced-classes/) and [on the 'right' way to oversample](https://beckernick.github.io/oversampling-modeling/) for predictive modeling.
 
-**^GITHUB_repo** https://github.com/hengrumay/recipes 
+**<sup>GITHUB_repo:</sup>** https://github.com/hengrumay/recipes 
 
 <!--^§ The topic and classification modeling as well as the prototype web application detailed here were initially developed during the last 3 weeks of the [METIS data science bootcamp](https://www.thisismetis.com/data-science-bootcamps) in Dec. 2016. Subsequent revisions to the original LDA modeling and assessments were performed to improve interpretation of the model(s). 
 -->
