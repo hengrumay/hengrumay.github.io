@@ -20,7 +20,7 @@ When festivities and inherent traditions place us under time, logistical and res
 ### But how does one actually classify recipes? 
 **Not all recipes are created equal** – I learnt this the hard way. Recipes differ on the number of ingredients whether they are exotic or locally sourced, how ingredients are prepared, the type of cooking technique or the equipment required, and so forth. If there would be a way to classify recipes as ‘easy’ or ‘challenging’ perhaps this information could help one to better plan and prepare the combination of dishes for a festive meal. 
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/NotAllRecipesCreatedEqual.png)<center>FIG1: *The many ways that make each recipe different*</center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/NotAllRecipesCreatedEqual.png)<center>FIG1: <i>The many ways that make each recipe different</i></center>
 
 Interestingly, as I sifted through various sources of recipes the information about its preparation difficulty is not always available, nor is it often explicitly stated. It is possible that how difficult a recipe is may depend on your cooking experience, and it might be best left to self-discovery. Yet basic and advanced cooking classes exist, so it might be worth asking:  
 > ### Could we learn from available recipes that are already categorized for their relative difficulty, which aspects or features contribute to their preparation ease or complexity? 
@@ -52,7 +52,7 @@ Interestingly, as I sifted through various sources of recipes the information ab
 -	Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
 
 ### -- TOPIC-MODELING
--	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->.* --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)^(LDA).<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
+-	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->. --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)[^LDA].<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
 
 -  The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet^(Dir) prior \\(Dir_a)\\), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior \\(Dir_b)\\). 
 > ### LDA assumption: generated documents consist of distributions of topics, which are distributions of words. 
@@ -199,7 +199,7 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 ====  
 ##### _FOOTNOTES:_ 
 
-**^(LDA)** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
+**[^LDA]:** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
 
 **^(Dir)** The "Dirichlet" distribution describes a distribution of distributions.
 
