@@ -16,6 +16,7 @@ Interestingly, as I sifted through various sources of recipes the information ab
 > ### Could we learn from available recipes that are already categorized for their relative difficulty, which aspects or features contribute to their preparation ease or complexity? 
 
 <br>
+
 ### The ingredients and steps involved:
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/CreateNUseRecipeDiffTagger.png)<center>FIG2: *A visual summary of the steps taken to create and use a Recipe-Difficulty-Tagger*</center>
@@ -38,10 +39,10 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 -	Among various tweaks to the publicly available [NYT ingredient phrase tagger code](https://github.com/NYTimes/ingredient-phrase-tagger) given the different data structure between [NYT Cooking](https://cooking.nytimes.com/) vs [BBC Good Food](https://www.bbcgoodfood.com/) recipes, as well as what might be deemed as collective unit terms e.g. ‘clove’, ‘bushel’, ‘pinch’, I also modified the NYT Ingredient Phrase Tagger utility code to account for metric units, since the recipes from [BBC Good Food](https://www.bbcgoodfood.com/) are written in British rather than American English. 
 
--	Subsequently, the recipe ingredient and instruction text data were [tokenized] (https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
+-	Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
 
 ### -- TOPIC-MODELING
--	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->.* --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)^(LDA).<!-- # – distinct from [Linear Discriminant Analysis] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
+-	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->.* --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)^(LDA).<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
 
 -  The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet^(Dir) prior \\(Dir_a)\\), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior \\(Dir_b)\\). 
 > ### LDA assumption: generated documents consist of distributions of topics, which are distributions of words. 
@@ -93,19 +94,21 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 -	To address the uneven proportion^sample-issue of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
 -	To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
 -	The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):   
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"><center>FIG5: *Precision and Recall, illustrated -- credit: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg)*</center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: *Precision and Recall, illustrated -- credit: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg)* </center>
 
 -	The different models do comparably well after tuning for their respective parameters (e.g. learning rate | number of trees | training features) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
-![](file:///Users/hrm/Dropbox/RecentProjects/DataStories_github_io/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: *Comparison of classification outcomes on hold-out data*</center>
+
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: *Comparison of classification outcomes on hold-out data*</center>
 
 
 <!--##`</ CLOSE DIV to HIDE and SHOW the details >`-->
 
 <br>
+
 ### FEATUREs contributing to recipe difficulty 
 With our classification models yeilding reasonable [precision and recall](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg) metrics, we could start to probe into features contributing to a recipe's preparation ease or complexity: 
 
-![](file:///Users/hrm/Dropbox/RecentProjects/DataStories_github_io/MenuPlannerHelper/Recipe-Difficulty.png)<center>FIG7: *Features (normalized) contributing to making a recipe 'easy' or 'more challenging'*</center>  
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Recipe-Difficulty.png)<center>FIG7: *Features (normalized) contributing to making a recipe 'easy' or 'more challenging'*</center>  
 
 <!--Given that we are interested in understanding what might be relevant features contributing to making a recipe easy or challenging, it is worth choosing the model that provides a more intuitive understanding of how recipes are classified. 
 -->In addition to providing a probability of the associated topics, the `LogisticRegression` model with lasso regularization provides us some helpful insights into understanding what might be relevant features contributing to making a recipe easy or more challenging:
@@ -118,21 +121,25 @@ With our classification models yeilding reasonable [precision and recall](https:
 
   
 <br>
+
 ### APPLICATIONs 
 Now that we have a working recipe-difficulty-tagger (classification model), we could start tagging (existing and new) recipes within the collection that doesn’t yet have a difficulty category. 
 
-Apart from classifying recipes for their difficulty, I was also interested in providing alternative suggestions that could still make use of ingredients similar to those listed in the original recipe. <!--Indeed we could also develop the MenuPlannerHelper App! --> To this end, I further employed the [K-nearest-neighbors (KNN) algorithm](http://www.saedsayad.com/k_nearest_neighbors.htm) on the LDA document-topic association matrix derived for ingredient topics across all recipes. Doing so, we could find `K` other recipes (documents) whose distribution of ingredient-topics are closest to any recipe of choice (as measured by [cosine-similarity](https://en.wikipedia.org/wiki/Cosine_similarity)). <!--[Similar implementation is also described in http://ieeexplore.ieee.org/document/8054520/  ||
+Apart from classifying recipes for their difficulty, I was also interested in providing alternative suggestions that could still make use of ingredients similar to those listed in the original recipe. <!--Indeed we could also develop the MenuPlannerHelper App! --> To this end, I further employed the [K-nearest-neighbors (KNN) algorithm](http://www.saedsayad.com/k_nearest_neighbors.htm) on the LDA document-topic association matrix derived for ingredient topics across all recipes. Doing so, we could find `K` other recipes (documents) whose distribution of ingredient-topics are closest to any recipe of choice (as measured by [cosine-similarity](https://en.wikipedia.org/wiki/Cosine_similarity)). 
+<!--[Similar implementation is also described in http://ieeexplore.ieee.org/document/8054520/  ||
 | https://doi.org/10.1016/j.proeng.2014.03.129]-->
 
 <!--Using the LDA association matrices, KNN algorithm, I built a minimal web app using Flask, twitter bootstrap, and CSS+HTML. 
 -->
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
 
-<video controls width="800" height="600" align="center">
-	<source src="file:///Users/hrm/Dropbox/RecentProjects/DataStories_github_io/MenuPlannerHelper/MenuHelper_v13.mov" type="video/mp4">
+<!-- <video controls width="800" height="600" align="center">
+	<source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mov" type="video/mp4">
   <!--<source src="videos/real-estate.mp4" type="video/mp4">-->
   <!--<source src="videos/real-estate.ogv" type="video/ogg">-->
-</video><center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> 
+<!-- </video> -->
+
+<center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> 
 
 <!--[![](file:///Users/hrm/Dropbox/RecentProjects/DataStories_github_io/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)* 
 < TRY to embed demo video > 
@@ -143,6 +150,7 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
 Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/). 
 
 <br> 
+
 > ### Some thoughts on how to further improve and extend the work here... 
 
 
