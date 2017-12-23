@@ -117,7 +117,7 @@ With our classification models yeilding reasonable [precision and recall](https:
 
 - **More-Challenging Recipes:** those that have ingredients related to using chocolate and instructions or methods that involve e.g. making ganache, pastry, parcels; deep-frying, roasting; or preparing custard and especially meringues <!--are considered ‘more-challenging’.--> 
 
-> ### <!--As someone who has attempted trying a range of recipes and cooking methods, these insights seem somewhat reasonable.--> <!--*Intrestingly, these insights seem to support my suspicion that some finesse is required in becoming even an amateur pastry chef!*-->  
+<!--As someone who has attempted trying a range of recipes and cooking methods, these insights seem somewhat reasonable.--> <!--*Intrestingly, these insights seem to support my suspicion that some finesse is required in becoming even an amateur pastry chef!*-->  
 
   
 <br>
