@@ -34,8 +34,8 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 
 
-#### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*  <br>
-<!--##`< Create a DIV to HIDE and SHOW the details >`-->
+#### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*  
+<!--##`< Create a DIV to HIDE and SHOW the details >`--><br>
 
 #### -- DATA
 Relative to many online recipes, [BBC Good Food](https://www.bbcgoodfood.com/) has a decent collection of recipes with information on the difficulty of a recipe. 
@@ -167,8 +167,8 @@ Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serv
 <br>
 
 
-> ### Some thoughts on how to further improve and extend the work here... <br>
-
+> ### Some thoughts on how to further improve and extend the work here... 
+<br>
 
 #### APPLICATION EXTENSIONS:
 
@@ -177,6 +177,7 @@ Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serv
 -- We could also assess if similar ingredient and instruction topic features overlap across different recipe collections for difficulty. There may be a ‘universal’ set of features that could be approximated (and updated) to tag recipes for difficulty.  
 
 -- Since the concept of ‘difficulty’ may be subjective, one could potentially personalize the MenuHelper app to track your culinary adventures over time. This in turn might mean that personal perspectives on what is subjectively easy or challenging could fine-tune the recipe-difficulty-tagger model to fit your level of comfort and may be used to suggest more challenging alternatives should you feel up for it. 
+<br>
 
 #### ROOM for IMPROVEMENTs in data and modeling pipelines:
 
@@ -209,7 +210,7 @@ _____
 
 ##### _FOOTNOTES:_ 
 
-**<sup>LDA:</sup>** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
+**<sup>LDA:</sup>** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)](https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
 
 **<sup>Dir:</sup>** The "Dirichlet" distribution describes a distribution of distributions.
 
