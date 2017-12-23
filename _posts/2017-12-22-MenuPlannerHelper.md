@@ -192,13 +192,13 @@ Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serv
 
 <br>
 
-I look forward to trying out some of these ideas and sharing updates on another occasion. 
+**I look forward to trying out some of these ideas and sharing updates on another occasion.** 
 
 Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbcgoodfood.com/) why not give the [MenuHelper](bit.ly/menuplannerhelper) App a go! You never know, there could be an easier or similarly delectable recipe that could help simplify your holiday festive meal preparation. 
 
 <br>
 
-#### *Until next time, Happy Holidays to all!*
+### *Until next time, Happy Holidays to all!*
 
 <br>
 <br>
