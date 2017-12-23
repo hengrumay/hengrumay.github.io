@@ -148,14 +148,14 @@ Apart from classifying recipes for their difficulty, I was also interested in pr
 <!--Using the LDA association matrices, KNN algorithm, I built a minimal web app using Flask, twitter bootstrap, and CSS+HTML. 
 -->
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
+
 <center>
-<video controls width="800" height="600" align="center">
+<video controls width="800" height="600">
 	<source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mp4" type="video/mp4">
   <!--<source src="videos/real-estate.mp4" type="video/mp4">-->
   <!--<source src="videos/real-estate.ogv" type="video/ogg">-->
 </video> 
-</center>
-<center>VIDEO DEMO:<i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i> </center> 
+VIDEO DEMO:<i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i> </center> 
 
 <!--[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i></i> 
 < TRY to embed demo video > 
@@ -163,9 +163,11 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
 
 <br>
 
+
 Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/). 
 
 <br> 
+
 
 > ### Some thoughts on how to further improve and extend the work here... 
 
