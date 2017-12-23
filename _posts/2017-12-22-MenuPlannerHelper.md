@@ -156,7 +156,7 @@ Apart from classifying recipes for their difficulty, I was also interested in pr
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
 
 <center>
-  <video controls width="900" height="800">
+  <video controls> <!-- width="900" height="800"-->
    <source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mov" type="video/mp4">
   </video>
 </center>	
