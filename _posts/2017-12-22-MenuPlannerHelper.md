@@ -13,10 +13,11 @@ published: true
 *The inspiration for its creation come from the fact that while I generally browse for new recipes to try, I sometimes find myself in situations where there will be recipes with accompanying food photography that look amazing and seemingly ‘doable’, yet upon embarking on the preparations, they present as more challenging than originally anticipated. In those scenarios, I find myself wishing that there might be an opportunity to use the ingredients for another similar but ‘simpler’ recipe. Likewise, there are other occasions, when a recipe turns out somewhat less complicated and you might wish to add some sophistication without over-tweaking it. Having cooked with others and listened to various kitchen nightmares, I have reason to believe that my experiences are not unique.*
 
 When festivities and inherent traditions place us under time, logistical and resource constraints, you don’t necessarily have much room to “mess up” when you are preparing a meal for others. With various things to coordinate, the last thing we really need while multi-tasking is a kitchen disaster! 
+<br>
 
 ### This is where the *[MenuHelper](https://bit.ly/menuplannerhelper)* app can be useful. 
-
 > **It was developed to help categorize recipes into different levels of complexity so that one could experience less stress and more enjoyment in coordinating the preparation of various dishes for e.g. a dinner party. Importantly, because of how it is trained to categorize recipes for relative preparation difficulty, one could further associate recipes based on the degree of similarity between their ingredients. This becomes handy if you wish to pivot between difficulty levels but also use similar ingredients that you may already have available.**
+<br>
 
 ### But how does one actually classify recipes? 
 **Not all recipes are created equal** – I learnt this the hard way. Recipes differ on the number of ingredients whether they are exotic or locally sourced, how ingredients are prepared, the type of cooking technique or the equipment required, and so forth. If there would be a way to classify recipes as ‘easy’ or ‘challenging’ perhaps this information could help one to better plan and prepare the combination of dishes for a festive meal. 
