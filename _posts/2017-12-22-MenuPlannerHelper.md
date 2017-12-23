@@ -155,14 +155,13 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
    <source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mov" type="video/mp4">
   </video>
 </center>	
-<center>VIDEO DEMO:<i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i> </center> 
+<center>VIDEO DEMO:<i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask</a>, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i> </center> 
 
-<!--[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i></i> 
+<!--[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask</a>, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i></i> 
 < TRY to embed demo video > 
 </center>-->  
 
 <br>
-
 
 Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/). 
 
