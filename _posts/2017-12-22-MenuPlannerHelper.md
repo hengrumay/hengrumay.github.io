@@ -224,7 +224,7 @@ _____
 
 <b><sup>sample-issue:</sup></b> Some heuristics: [on how to deal with imbalanced data](https://svds.com/learning-imbalanced-classes/) and [on the 'right' way to oversample](https://beckernick.github.io/oversampling-modeling/) for predictive modeling.
 
-<b><sup>GITHUB_repo:</sup></b> [here](https://github.com/hengrumay/recipes) 
+<b><sup>Link:</sup></b> [GITHUB_repo](https://github.com/hengrumay/recipes) 
 
 _____  
 
