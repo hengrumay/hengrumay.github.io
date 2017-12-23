@@ -74,9 +74,12 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 
 ### -- CLASSIFICATION
 -   With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
-<!--β_0  + β_1 〖LDA〗_ingredients  + β_2 〖LDA〗_instructions  + β_3 〖Time〗_prep  + β_4 〖Time〗_cook+ β_5 N_ingredients  =〖Difficulty 〗_(0=more_challenging)^(1=easy)--> 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png)
-<!--<math display="block">
+<!--β_0  + β_1 〖LDA〗_ingredients  + β_2 〖LDA〗_instructions  + β_3 〖Time〗_prep  + β_4 〖Time〗_cook+ β_5 N_ingredients  =〖Difficulty 〗_(0=more_challenging)^(1=easy)
+--> 
+<!-- ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png) -->
+<img src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png" center>
+<!--
+<math display="block">
 	<msubsup><mi>β</mi> <mi>0</mi> <mi></mi></msubsup>
 	<mo>+</mo>
 	<msubsup><mi>β</mi> <mi>1</mi> <mi></mi></msubsup>
@@ -95,7 +98,8 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 	<msubsup><mi>N</mi> <mi>ingredients</mi> <mi></mi></msubsup>
    	<mo>=</mo>
    	<msubsup><mi>Difficulty</mi> <mi>0=more_challenging</mi> <mi>1=easy</mi></msubsup> 
-</math> -->
+</math> 
+-->
 
 -   Ensemble ([Gradient-boosted & Random Forest](https://discuss.analyticsvidhya.com/t/what-is-the-fundamental-difference-between-randomforest-and-gradient-boosting-algorithms/2341)) [classification](http://www.saedsayad.com/decision_tree.htm) [Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052) and [Logistic Regression](http://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html) Models with different [regularization e.g. Lasso(L1) & Ridge(L2)](https://www.quora.com/Using-logistic-regression-and-L1-L2-regularization-do-I-have-to-care-about-features-selection) parameters were compared.
 
