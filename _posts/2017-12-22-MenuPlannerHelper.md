@@ -34,15 +34,15 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 
 
-### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*
+#### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*
 <!--##`< Create a DIV to HIDE and SHOW the details >`-->
 
-### -- DATA
+#### -- DATA
 -- Relative to many online recipes, [BBC Good Food](https://www.bbcgoodfood.com/) has a decent collection of recipes with information on the difficulty of a recipe. 
 	
 -- I coded a web-recipe scrapper to automatically scrap all available (~10,000 at the time of scraping) recipes from [BBCgoodfood.com](https://www.bbcgoodfood.com/). This included information on Ingredients, Instructions, as well as additional recipe information e.g. difficulty, preparation time, etc.
 
-### -- PRE-PROCESSING
+#### -- PRE-PROCESSING
 -- Like numerical data, text data also requires some form of “pre-processing”, which aims to clean up information that is not task-relevant and/or to restructure the data for subsequent analyses. To this end, I employed techniques from Natural Language Processing (NLP), which can be appreciated as the union of Artificial Intelligence (AI) and linguistics. NLP involves developing and using algorithmic and/or probablistic analysis of written language to automatically derive some insights from text data. 
 
 -- In particular, I borrowed the [Conditional-Random-Field Ingredient Phrase Tagger developed by the New York Times (NYT)](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) with optimization and inference using the [CRF++ implementation](https://taku910.github.io/crfpp/) to help with predicting the sequence of ingredient information. I modified the NYT Ingredient Phrase Tagger specifically to help remove quantity and units’ information from each BBCgooodfood recipe’s ingredient phrases and also to retrieve the name(s) of ingredients used. <!--(*NB – the outcome of the modified NYT ingredient phrase tagger also inherits the ~89% phrase-tagging accuracy and while ‘imperfect’ it does a sufficiently decent job!*)-->
@@ -51,7 +51,7 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 -- Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
 
-### -- TOPIC-MODELING
+#### -- TOPIC-MODELING
 -- Next, I performed ***topic-modeling*** --- an un-supervised machine learning approach that discovers the associations between words, topics, and documents using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.
 
 -- The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet<sup>Dir</sup> prior `Dir_a`), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior `Dir_b`). 
@@ -68,12 +68,11 @@ Interestingly, as I sifted through various sources of recipes the information ab
 	http://ellisp.github.io/blog/2017/01/05/topic-model-cv
 https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-the-fit-level-with-current-number-of-topics
 )-->, the final LDA model yielded generally meaningful ingredient (`N=100`) and instruction (`N=80`) topics. 
-
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: <i>Examples of the varying distributions of Ingredient topics associated with each recipe</i></center>
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the <a href="https://github.com/bmabey/pyLDAvis">interactive LDAviz tool</a></i></center>
 
-### -- CLASSIFICATION
+#### -- CLASSIFICATION
 -- With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
 
 <!-- ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png) -->
@@ -102,7 +101,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 -- Ensemble ([Gradient-boosted & Random Forest](https://discuss.analyticsvidhya.com/t/what-is-the-fundamental-difference-between-randomforest-and-gradient-boosting-algorithms/2341)) [classification](http://www.saedsayad.com/decision_tree.htm) [Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052) and [Logistic Regression](http://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html) Models with different [regularization e.g. Lasso(L1) & Ridge(L2)](https://www.quora.com/Using-logistic-regression-and-L1-L2-regularization-do-I-have-to-care-about-features-selection) parameters were compared.
 
 
-### --	TESTING-VALIDATING
+#### --	TESTING-VALIDATING
 -- To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
 
 -- To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
@@ -136,7 +135,6 @@ In addition to providing a probability of the associated topics, the `LogisticRe
 
 <!--As someone who has attempted trying a range of recipes and cooking methods, these insights seem somewhat reasonable.--> <!--*Intrestingly, these insights seem to support my suspicion that some finesse is required in becoming even an amateur pastry chef!*-->  
 
-  
 <br>
 
 ### APPLICATIONs 
@@ -165,25 +163,23 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
 
 Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/). 
 
-<br> 
-
 
 > ### Some thoughts on how to further improve and extend the work here... 
 
 
 ### APPLICATION EXTENSIONS:
 
-** One could apply the <!--same techniques-->recipe-difficulty-tagger to other (online and/or analog) recipe collection. <!--e.g. NYT Cooking etc.-->  
+-- One could apply the <!--same techniques-->recipe-difficulty-tagger to other (online and/or analog) recipe collection. <!--e.g. NYT Cooking etc.-->  
   
-** We could also assess if similar ingredient and instruction topic features overlap across different recipe collections for difficulty. There may be a ‘universal’ set of features that could be approximated (and updated) to tag recipes for difficulty.  
+-- We could also assess if similar ingredient and instruction topic features overlap across different recipe collections for difficulty. There may be a ‘universal’ set of features that could be approximated (and updated) to tag recipes for difficulty.  
 
-** Since the concept of ‘difficulty’ may be subjective, one could potentially personalize the MenuHelper app to track your culinary adventures over time. This in turn might mean that personal perspectives on what is subjectively easy or challenging could fine-tune the recipe-difficulty-tagger model to fit your level of comfort and may be used to suggest more challenging alternatives should you feel up for it. 
+-- Since the concept of ‘difficulty’ may be subjective, one could potentially personalize the MenuHelper app to track your culinary adventures over time. This in turn might mean that personal perspectives on what is subjectively easy or challenging could fine-tune the recipe-difficulty-tagger model to fit your level of comfort and may be used to suggest more challenging alternatives should you feel up for it. 
 
 ### ROOM for IMPROVEMENTs in data and modeling pipelines:
 
-** The [issue of unbalanced class proportion](https://svds.com/learning-imbalanced-classes/)<sup>sample-issue</sup> and modeling could be further assessed with [stratified k-fold cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html) on the training data, adapting the data resampling with bootstrap aggregating (‘bagging’), or indeed adjusting the class-weights.
+-- The [issue of unbalanced class proportion](https://svds.com/learning-imbalanced-classes/)<sup>sample-issue</sup> and modeling could be further assessed with [stratified k-fold cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html) on the training data, adapting the data resampling with bootstrap aggregating (‘bagging’), or indeed adjusting the class-weights.
 
-** Using a more objective way [to select the number of topics in the topic-modeling](http://ellisp.github.io/blog/2017/01/05/topic-model-cv)<sup>Ntopics</sup> , as well as other ways of defining relevant recipe features from recipe instructions e.g. context of words maybe useful and [word2vec](https://arxiv.org/pdf/1310.4546.pdf)<!--(http://adventuresinmachinelearning.com/word2vec-keras-tutorial/)--> may help with finding these.
+-- Using a more objective way [to select the number of topics in the topic-modeling](http://ellisp.github.io/blog/2017/01/05/topic-model-cv)<sup>Ntopics</sup> , as well as other ways of defining relevant recipe features from recipe instructions e.g. context of words maybe useful and [word2vec](https://arxiv.org/pdf/1310.4546.pdf)<!--(http://adventuresinmachinelearning.com/word2vec-keras-tutorial/)--> may help with finding these.
 
 <br>
 
