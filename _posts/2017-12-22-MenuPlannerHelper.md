@@ -75,7 +75,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 ### -- CLASSIFICATION
 -   With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
 <!--β_0  + β_1 〖LDA〗_ingredients  + β_2 〖LDA〗_instructions  + β_3 〖Time〗_prep  + β_4 〖Time〗_cook+ β_5 N_ingredients  =〖Difficulty 〗_(0=more_challenging)^(1=easy)--> 
-<center>![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png)</center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png)
 <!--<math display="block">
 	<msubsup><mi>β</mi> <mi>0</mi> <mi></mi></msubsup>
 	<mo>+</mo>
