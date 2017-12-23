@@ -198,7 +198,7 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 ----
 ##### *Postcript*:  
 *The use of recipes as a motivating dataset for exploring topic-modeling and application development may seem frivolous. However, the methods, learning algorithms, and ideas integrated in the work described here have applications that can be extrapolated to other domains and problems that deal with unstructured text information or others requiring feature engineering.*
-----
+
 
 <br>
 
