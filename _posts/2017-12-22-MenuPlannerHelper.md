@@ -3,7 +3,7 @@ layout: post
 title: How to simplify your holiday festive meal planning 
 subtitle: A Recipe-Diffficulty-Tagger and the MenuPlannerHelper App to the rescue!
 date: 2017-12-22 16:11:27
-author: H-RM Merkle-Tan
+author: h-rm
 comments: true
 published: true
 ---
@@ -113,8 +113,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 
 <br>
 
-
--- The different models do comparably well after tuning for their respective parameters (e.g. learning rate | number of trees | training features) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
+-- The different models do comparably well after tuning for their respective parameters (e.g. learning rate, number of trees, training features etc.) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
 
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: <i>Comparison of classification outcomes on hold-out data</i></center>
