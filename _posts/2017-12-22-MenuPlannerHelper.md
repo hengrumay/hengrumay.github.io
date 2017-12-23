@@ -52,7 +52,7 @@ Interestingly, as I sifted through various sources of recipes the information ab
 -	Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
 
 ### -- TOPIC-MODELING
--	Next, I performed ***topic-modeling*** --- *an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->. --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
+-	Next, I performed ***topic-modeling*** --- an un-supervised machine learning approach that discovers the associations between words, topics, and documents<!-- (e.g. in the present case, it attempts to associate the ingredient phrases or instructions for each recipe with a topic)-->. --- using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.<!-- # – distinct from [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) which is an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events)--> 
 
 -  	The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet<sup>Dir</sup> prior `Dir_a`), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior `Dir_b`). 
 > ### LDA assumption: generated documents consist of distributions of topics, which are distributions of words. 
@@ -61,12 +61,12 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 - While other topic-models would likely also yield sensible topic clusters; [LDA] (http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf) was opted because its learned topics are generally more concise and coherent, and it is considered [a strong choice for applications in which a human end-user is envisioned to interact with the learned topics](http://aclweb.org/anthology/D/D12/D12-1087.pdf).
 
--	I implemented LDA separately on tokenized ingredient and instruction text data across all recipes using Python’s [scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html#sklearn.decomposition.LatentDirichletAllocation) (although you can also do so with the [Gensim](https://radimrehurek.com/gensim/models/ldamodel.html) library). After some iterative process in assessing the number of latent topics^Ntopics from the collection of recipes<!--** (heuristics in determining number of topics can be found here## -
+-	I implemented LDA separately on tokenized ingredient and instruction text data across all recipes using Python’s [scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html#sklearn.decomposition.LatentDirichletAllocation) (although you can also do so with the [Gensim](https://radimrehurek.com/gensim/models/ldamodel.html) library). After some iterative process in assessing the number of latent topics<sup>Ntopics</sup> from the collection of recipes<!--** (heuristics in determining number of topics can be found here## -
 	https://github.com/nikita-moor/ldatuning
 	https://github.com/WZBSocialScienceCenter/tmtoolkit
 	http://ellisp.github.io/blog/2017/01/05/topic-model-cv
 https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-the-fit-level-with-current-number-of-topics
-)-->, the final LDA model yielded generally meaningful ingredient (\\(N\\)=100) and instruction (\\(N\\)=80) topics. 
+)-->, the final LDA model yielded generally meaningful ingredient (`N=100`) and instruction (`N=80`) topics. 
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: <i>Examples of the varying distributions of Ingredient topics associated with each recipe</i></center>
 
@@ -207,7 +207,7 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 
 **<sup>sample-issue:</sup>** Some heuristics: [on how to deal with imbalanced data](https://svds.com/learning-imbalanced-classes/) and [on the 'right' way to oversample](https://beckernick.github.io/oversampling-modeling/) for predictive modeling.
 
-**<sup>GITHUB_repo:</sup>** https://github.com/hengrumay/recipes 
+**<sup>GITHUB_repo:</sup>** [https://github.com/hengrumay/recipes](https://github.com/hengrumay/recipes) 
 
 <!--^§ The topic and classification modeling as well as the prototype web application detailed here were initially developed during the last 3 weeks of the [METIS data science bootcamp](https://www.thisismetis.com/data-science-bootcamps) in Dec. 2016. Subsequent revisions to the original LDA modeling and assessments were performed to improve interpretation of the model(s). 
 -->
