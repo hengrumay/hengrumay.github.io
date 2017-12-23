@@ -174,7 +174,7 @@ Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serv
 
 #### APPLICATION EXTENSIONS:
 
--- One could apply the <!--same techniques-->recipe-difficulty-tagger to other (online and/or analog) recipe collection. <!--e.g. NYT Cooking etc.-->  
+-- One could apply the recipe-difficulty-tagger to other (online and/or analog) recipe collection. <!--e.g. NYT Cooking etc.-->  
   
 -- We could also assess if similar ingredient and instruction topic features overlap across different recipe collections for difficulty. There may be a ‘universal’ set of features that could be approximated (and updated) to tag recipes for difficulty.  
 
@@ -205,23 +205,24 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 ----
 ##### *Postcript*:  
 *The use of recipes as a motivating dataset for exploring topic-modeling and application development may seem frivolous. However, the methods, learning algorithms, and ideas integrated in the work described here have applications that can be extrapolated to other domains and problems that deal with unstructured text information or others requiring feature engineering.*
-
+----
 
 <br>
 
 _____  
-----
+
 ##### _FOOTNOTES:_ 
 
-<b>LDA:</b> An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)](https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
+<b><sup>LDA:</sup></b> An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)](https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
 
-<b>Dir:<b/> The "Dirichlet" distribution describes a distribution of distributions.
+<b><sup>Dir:</sup><b/> The "Dirichlet" distribution describes a distribution of distributions.
 
-<b><sup>Ntopics:</sup><b/> A more objective way to determine the 'optimal' number of topics for a corpus of documents is through cross-validating a model's [perplexity](https://en.wikipedia.org/wiki/Perplexity) -- *the measure of how well a probability model predicts a data sample*. An overview of [applying this heuristic](https://doi.org/10.1186/1471-2105-16-S13-S8) using the [ldatuning R package](https://cran.r-project.org/web/packages/ldatuning/index.html) is given [here](http://ellisp.github.io/blog/2017/01/05/topic-model-cv), and a tutorial using the [Text Mining and Topic Modeling Toolkit for Python](https://github.com/WZBSocialScienceCenter/tmtoolkit) can be found [here](https://datascience.blog.wzb.eu/2017/11/09/topic-modeling-evaluation-in-python-with-tmtoolkit/)  
+<b><sup>Ntopics:</sup></b> A more objective way to determine the 'optimal' number of topics for a corpus of documents is through cross-validating a model's [perplexity](https://en.wikipedia.org/wiki/Perplexity) -- *the measure of how well a probability model predicts a data sample*. An overview of [applying this heuristic](https://doi.org/10.1186/1471-2105-16-S13-S8) using the [ldatuning R package](https://cran.r-project.org/web/packages/ldatuning/index.html) is given [here](http://ellisp.github.io/blog/2017/01/05/topic-model-cv), and a tutorial using the [Text Mining and Topic Modeling Toolkit for Python](https://github.com/WZBSocialScienceCenter/tmtoolkit) can be found [here](https://datascience.blog.wzb.eu/2017/11/09/topic-modeling-evaluation-in-python-with-tmtoolkit/)  
 
-<b><sup>sample-issue:</sup><b/> Some heuristics: [on how to deal with imbalanced data](https://svds.com/learning-imbalanced-classes/) and [on the 'right' way to oversample](https://beckernick.github.io/oversampling-modeling/) for predictive modeling.
+<b><sup>sample-issue:</sup></b> Some heuristics: [on how to deal with imbalanced data](https://svds.com/learning-imbalanced-classes/) and [on the 'right' way to oversample](https://beckernick.github.io/oversampling-modeling/) for predictive modeling.
 
-<b><sup>GITHUB_repo:</sup><b/> [https://github.com/hengrumay/recipes](https://github.com/hengrumay/recipes) 
+<b><sup>GITHUB_repo:</sup></b> [https://github.com/hengrumay/recipes](https://github.com/hengrumay/recipes) 
+_____  
 
 <!--^§ The topic and classification modeling as well as the prototype web application detailed here were initially developed during the last 3 weeks of the [METIS data science bootcamp](https://www.thisismetis.com/data-science-bootcamps) in Dec. 2016. Subsequent revisions to the original LDA modeling and assessments were performed to improve interpretation of the model(s). 
 -->
