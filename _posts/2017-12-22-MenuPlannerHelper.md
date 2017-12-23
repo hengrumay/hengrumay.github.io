@@ -15,7 +15,7 @@ published: true
 When festivities and inherent traditions place us under time, logistical and resource constraints, you don’t necessarily have much room to “mess up” when you are preparing a meal for others. With various things to coordinate, the last thing we really need while multi-tasking is a kitchen disaster! 
 <br>
 
-### This is where the *[MenuHelper](https://bit.ly/menuplannerhelper)* app can be useful. 
+### This is where the *[MenuHelper](https://bit.ly/menuplannerhelper)* app can be useful.   
 > **It was developed to help categorize recipes into different levels of complexity so that one could experience less stress and more enjoyment in coordinating the preparation of various dishes for e.g. a dinner party. Importantly, because of how it is trained to categorize recipes for relative preparation difficulty, one could further associate recipes based on the degree of similarity between their ingredients. This becomes handy if you wish to pivot between difficulty levels but also use similar ingredients that you may already have available.**
 <br>
 
