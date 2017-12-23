@@ -74,12 +74,10 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 
 ### -- CLASSIFICATION
 -   With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
-<!--β_0  + β_1 〖LDA〗_ingredients  + β_2 〖LDA〗_instructions  + β_3 〖Time〗_prep  + β_4 〖Time〗_cook+ β_5 N_ingredients  =〖Difficulty 〗_(0=more_challenging)^(1=easy)
---> 
+
 <!-- ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png) -->
 <img src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png" center>
-<!--
-<math display="block">
+<!--<math display="block">
 	<msubsup><mi>β</mi> <mi>0</mi> <mi></mi></msubsup>
 	<mo>+</mo>
 	<msubsup><mi>β</mi> <mi>1</mi> <mi></mi></msubsup>
@@ -98,19 +96,22 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 	<msubsup><mi>N</mi> <mi>ingredients</mi> <mi></mi></msubsup>
    	<mo>=</mo>
    	<msubsup><mi>Difficulty</mi> <mi>0=more_challenging</mi> <mi>1=easy</mi></msubsup> 
-</math> 
--->
+</math> -->
 
 -   Ensemble ([Gradient-boosted & Random Forest](https://discuss.analyticsvidhya.com/t/what-is-the-fundamental-difference-between-randomforest-and-gradient-boosting-algorithms/2341)) [classification](http://www.saedsayad.com/decision_tree.htm) [Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052) and [Logistic Regression](http://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html) Models with different [regularization e.g. Lasso(L1) & Ridge(L2)](https://www.quora.com/Using-logistic-regression-and-L1-L2-regularization-do-I-have-to-care-about-features-selection) parameters were compared.
 
 
 ### --	TESTING-VALIDATING
 -	To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
--	To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
--	The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):   
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: <a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg">Wikipedia</a></i> </center>
 
+-	To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
+
+-	The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):
+
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: <a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg">Wikipedia</a></i> </center>   
+<br>
 -	The different models do comparably well after tuning for their respective parameters (e.g. learning rate | number of trees | training features) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
+
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: <i>Comparison of classification outcomes on hold-out data</i></center>
 
