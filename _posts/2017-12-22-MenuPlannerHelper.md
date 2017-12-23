@@ -29,7 +29,7 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 ### The ingredients and steps involved:
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/CreateNUseRecipeDiffTagger.png)<center>FIG2: *A visual summary of the steps taken to create and use a Recipe-Difficulty-Tagger*</center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/CreateNUseRecipeDiffTagger.png)<center>FIG2: <i>A visual summary of the steps taken to create and use a Recipe-Difficulty-Tagger</i></center>
 <br>
 
 
@@ -68,14 +68,14 @@ Interestingly, as I sifted through various sources of recipes the information ab
 https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-the-fit-level-with-current-number-of-topics
 )-->, the final LDA model yielded generally meaningful ingredient (\\(N\\)=100) and instruction (\\(N\\)=80) topics. 
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: *Examples of the varying distributions of Ingredient topics associated with each recipe*</center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: <i>Examples of the varying distributions of Ingredient topics associated with each recipe</i></center>
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: *An illustrative snapshot of Instruction topics visualized using the [interactive LDAviz tool](https://github.com/bmabey/pyLDAvis)*</center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the [interactive LDAviz tool](https://github.com/bmabey/pyLDAvis)</i></center>
 
 ### -- CLASSIFICATION
 -   With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
 <!--β_0  + β_1 〖LDA〗_ingredients  + β_2 〖LDA〗_instructions  + β_3 〖Time〗_prep  + β_4 〖Time〗_cook+ β_5 N_ingredients  =〖Difficulty 〗_(0=more_challenging)^(1=easy)--> 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png)
+<center>![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png)</center>
 <!--<math display="block">
 	<msubsup><mi>β</mi> <mi>0</mi> <mi></mi></msubsup>
 	<mo>+</mo>
@@ -104,11 +104,11 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 -	To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
 -	To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
 -	The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):   
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: *Precision and Recall, illustrated -- credit: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg)* </center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg)</i> </center>
 
 -	The different models do comparably well after tuning for their respective parameters (e.g. learning rate | number of trees | training features) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: *Comparison of classification outcomes on hold-out data*</center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: <i>Comparison of classification outcomes on hold-out data</i></center>
 
 
 <!--##`</ CLOSE DIV to HIDE and SHOW the details >`-->
@@ -118,7 +118,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 ### FEATUREs contributing to recipe difficulty 
 With our classification models yeilding reasonable [precision and recall](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg) metrics, we could start to probe into features contributing to a recipe's preparation ease or complexity: 
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Recipe-Difficulty.png)<center>FIG7: *Features (normalized) contributing to making a recipe 'easy' or 'more challenging'*</center>  
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Recipe-Difficulty.png)<center>FIG7: <i>Features (normalized) contributing to making a recipe 'easy' or 'more challenging'</i></center>  
 
 <!--Given that we are interested in understanding what might be relevant features contributing to making a recipe easy or challenging, it is worth choosing the model that provides a more intuitive understanding of how recipes are classified. 
 -->In addition to providing a probability of the associated topics, the `LogisticRegression` model with lasso regularization provides us some helpful insights into understanding what might be relevant features contributing to making a recipe easy or more challenging:
@@ -151,7 +151,7 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
 
 <!-- <center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> -->
 
-[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)* 
+[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)</i> 
 < TRY to embed demo video > 
 </center>  
 
