@@ -110,6 +110,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: <a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg">Wikipedia</a></i> </center>   
 <br>
+
 -	The different models do comparably well after tuning for their respective parameters (e.g. learning rate | number of trees | training features) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
 
 
@@ -147,18 +148,18 @@ Apart from classifying recipes for their difficulty, I was also interested in pr
 <!--Using the LDA association matrices, KNN algorithm, I built a minimal web app using Flask, twitter bootstrap, and CSS+HTML. 
 -->
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
-
+<center>
 <video controls width="800" height="600" align="center">
 	<source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mp4" type="video/mp4">
   <!--<source src="videos/real-estate.mp4" type="video/mp4">-->
   <!--<source src="videos/real-estate.ogv" type="video/ogg">-->
 </video> 
+</center>
+<center>VIDEO DEMO:<i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i> </center> 
 
-<!-- <center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> -->
-
-[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></i> 
+<!--[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> and hosted on <a href="https://aws.amazon.com/">AWS</a></i></i> 
 < TRY to embed demo video > 
-</center>  
+</center>-->  
 
 <br>
 
