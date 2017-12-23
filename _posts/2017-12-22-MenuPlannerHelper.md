@@ -15,6 +15,7 @@ published: true
 When festivities and inherent traditions place us under time, logistical and resource constraints, you don’t necessarily have much room to “mess up” when you are preparing a meal for others. With various things to coordinate, the last thing we really need while multi-tasking is a kitchen disaster! 
 
 ### This is where the *[MenuHelper](https://bit.ly/menuplannerhelper)* app can be useful. 
+
 > **It was developed to help categorize recipes into different levels of complexity so that one could experience less stress and more enjoyment in coordinating the preparation of various dishes for e.g. a dinner party. Importantly, because of how it is trained to categorize recipes for relative preparation difficulty, one could further associate recipes based on the degree of similarity between their ingredients. This becomes handy if you wish to pivot between difficulty levels but also use similar ingredients that you may already have available.**
 
 ### But how does one actually classify recipes? 
@@ -24,7 +25,7 @@ When festivities and inherent traditions place us under time, logistical and res
 
 Interestingly, as I sifted through various sources of recipes the information about its preparation difficulty is not always available, nor is it often explicitly stated. It is possible that how difficult a recipe is may depend on your cooking experience, and it might be best left to self-discovery. Yet basic and advanced cooking classes exist, so it might be worth asking:  
 
-> ### Could we learn from available recipes that are already categorized for their relative difficulty, which aspects or features contribute to their preparation ease or complexity? 
+> ### Could we learn from available recipes that are already categorized for their relative difficulty, which aspects or features contribute to their preparation ease or complexity?   
 
 
 <br>
