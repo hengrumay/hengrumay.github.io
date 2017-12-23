@@ -38,31 +38,33 @@ Interestingly, as I sifted through various sources of recipes the information ab
 <!--##`< Create a DIV to HIDE and SHOW the details >`-->
 
 #### -- DATA
--- Relative to many online recipes, [BBC Good Food](https://www.bbcgoodfood.com/) has a decent collection of recipes with information on the difficulty of a recipe. 
+Relative to many online recipes, [BBC Good Food](https://www.bbcgoodfood.com/) has a decent collection of recipes with information on the difficulty of a recipe. 
 	
--- I coded a web-recipe scrapper to automatically scrap all available (~10,000 at the time of scraping) recipes from [BBCgoodfood.com](https://www.bbcgoodfood.com/). This included information on Ingredients, Instructions, as well as additional recipe information e.g. difficulty, preparation time, etc.
+I coded a web-recipe scrapper to automatically scrap all available (~10,000 at the time of scraping) recipes from [BBCgoodfood.com](https://www.bbcgoodfood.com/). This included information on Ingredients, Instructions, as well as additional recipe information e.g. difficulty, preparation time, etc.  
+
 
 #### -- PRE-PROCESSING
--- Like numerical data, text data also requires some form of “pre-processing”, which aims to clean up information that is not task-relevant and/or to restructure the data for subsequent analyses. To this end, I employed techniques from Natural Language Processing (NLP), which can be appreciated as the union of Artificial Intelligence (AI) and linguistics. NLP involves developing and using algorithmic and/or probablistic analysis of written language to automatically derive some insights from text data. 
+Like numerical data, text data also requires some form of “pre-processing”, which aims to clean up information that is not task-relevant and/or to restructure the data for subsequent analyses. To this end, I employed techniques from Natural Language Processing (NLP), which can be appreciated as the union of Artificial Intelligence (AI) and linguistics. NLP involves developing and using algorithmic and/or probablistic analysis of written language to automatically derive some insights from text data. 
 
--- In particular, I borrowed the [Conditional-Random-Field Ingredient Phrase Tagger developed by the New York Times (NYT)](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) with optimization and inference using the [CRF++ implementation](https://taku910.github.io/crfpp/) to help with predicting the sequence of ingredient information. I modified the NYT Ingredient Phrase Tagger specifically to help remove quantity and units’ information from each BBCgooodfood recipe’s ingredient phrases and also to retrieve the name(s) of ingredients used. <!--(*NB – the outcome of the modified NYT ingredient phrase tagger also inherits the ~89% phrase-tagging accuracy and while ‘imperfect’ it does a sufficiently decent job!*)-->
+In particular, I borrowed the [Conditional-Random-Field Ingredient Phrase Tagger developed by the New York Times (NYT)](https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/) with optimization and inference using the [CRF++ implementation](https://taku910.github.io/crfpp/) to help with predicting the sequence of ingredient information. I modified the NYT Ingredient Phrase Tagger specifically to help remove quantity and units’ information from each BBCgooodfood recipe’s ingredient phrases and also to retrieve the name(s) of ingredients used. <!--(*NB – the outcome of the modified NYT ingredient phrase tagger also inherits the ~89% phrase-tagging accuracy and while ‘imperfect’ it does a sufficiently decent job!*)-->
 
--- Among various tweaks to the publicly available [NYT ingredient phrase tagger code](https://github.com/NYTimes/ingredient-phrase-tagger) given the different data structure between [NYT Cooking](https://cooking.nytimes.com/) vs [BBC Good Food](https://www.bbcgoodfood.com/) recipes, as well as what might be deemed as collective unit terms e.g. ‘clove’, ‘bushel’, ‘pinch’, I also modified the NYT Ingredient Phrase Tagger utility code to account for metric units, since the recipes from [BBC Good Food](https://www.bbcgoodfood.com/) are written in British rather than American English. 
+Among various tweaks to the publicly available [NYT ingredient phrase tagger code](https://github.com/NYTimes/ingredient-phrase-tagger) given the different data structure between [NYT Cooking](https://cooking.nytimes.com/) vs [BBC Good Food](https://www.bbcgoodfood.com/) recipes, as well as what might be deemed as collective unit terms e.g. ‘clove’, ‘bushel’, ‘pinch’, I also modified the NYT Ingredient Phrase Tagger utility code to account for metric units, since the recipes from [BBC Good Food](https://www.bbcgoodfood.com/) are written in British rather than American English. 
 
--- Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest. 
+Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest.   
+
 
 #### -- TOPIC-MODELING
--- Next, I performed ***topic-modeling*** --- an un-supervised machine learning approach that discovers the associations between words, topics, and documents using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.
+Next, I performed ***topic-modeling*** --- an un-supervised machine learning approach that discovers the associations between words, topics, and documents using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.
 
--- The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet<sup>Dir</sup> prior `Dir_a`), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior `Dir_b`). 
+The LDA topic-model assumes that a specific probabilistic model generates all the documents. Inherent in this assumption is that all documents share the same set of topics, but each document exhibits a mixture of topics (drawn from a Dirichlet<sup>Dir</sup> prior `Dir_a`), with some being more salient than others. The words associated with each topic is related to a multinomial distribution over the range of vocabulary (drawn from a Dirichlet prior `Dir_b`). 
 
 >> ### LDA assumption: generated documents consist of distributions of topics, which are distributions of words. 
 
--- <!--This process describes a generative model wherein--> This means that for any given observed collection of documents, we are trying to infer the latent variables ***i) the probability of words being used for each topic –-- a word-topic association,*** and ***ii) the probability of each topic appearing in each document –-- a topic—document association*** based on observed variables; the vocabulary itself. The inference process is typically derived through [Gibbs sampling](https://en.wikipedia.org/wiki/Gibbs_sampling), <!--an implementation of Markov Chain Monte-Carlo algorithm, -->or formulated as an optimization problem using [variational inference](https://ermongroup.github.io/cs228-notes/inference/variational/), and tuning the two hyper-parameters `a`) and `b`) which regulate the prior distributions. 
+<!--This process describes a generative model wherein--> This means that for any given observed collection of documents, we are trying to infer the latent variables ***i) the probability of words being used for each topic –-- a word-topic association,*** and ***ii) the probability of each topic appearing in each document –-- a topic—document association*** based on observed variables; the vocabulary itself. The inference process is typically derived through [Gibbs sampling](https://en.wikipedia.org/wiki/Gibbs_sampling), <!--an implementation of Markov Chain Monte-Carlo algorithm, -->or formulated as an optimization problem using [variational inference](https://ermongroup.github.io/cs228-notes/inference/variational/), and tuning the two hyper-parameters `a`) and `b`) which regulate the prior distributions. 
 
--- While other topic-models would likely also yield sensible topic clusters; [LDA] (http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf) was opted because its learned topics are generally more concise and coherent, and it is considered [a strong choice for applications in which a human end-user is envisioned to interact with the learned topics](http://aclweb.org/anthology/D/D12/D12-1087.pdf).
+While other topic-models would likely also yield sensible topic clusters; [LDA] (http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf) was opted because its learned topics are generally more concise and coherent, and it is considered [a strong choice for applications in which a human end-user is envisioned to interact with the learned topics](http://aclweb.org/anthology/D/D12/D12-1087.pdf).
 
--- I implemented LDA separately on tokenized ingredient and instruction text data across all recipes using Python’s [scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html#sklearn.decomposition.LatentDirichletAllocation) (although you can also do so with the [Gensim](https://radimrehurek.com/gensim/models/ldamodel.html) library). After some iterative process in assessing the number of latent topics<sup>Ntopics</sup> from the collection of recipes<!--** (heuristics in determining number of topics can be found here## -
+I implemented LDA separately on tokenized ingredient and instruction text data across all recipes using Python’s [scikit-learn](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html#sklearn.decomposition.LatentDirichletAllocation) (although you can also do so with the [Gensim](https://radimrehurek.com/gensim/models/ldamodel.html) library). After some iterative process in assessing the number of latent topics<sup>Ntopics</sup> from the collection of recipes<!--** (heuristics in determining number of topics can be found here## -
 	https://github.com/nikita-moor/ldatuning
 	https://github.com/WZBSocialScienceCenter/tmtoolkit
 	http://ellisp.github.io/blog/2017/01/05/topic-model-cv
@@ -70,10 +72,11 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 )-->, the final LDA model yielded generally meaningful ingredient (`N=100`) and instruction (`N=80`) topics. 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: <i>Examples of the varying distributions of Ingredient topics associated with each recipe</i></center>
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the <a href="https://github.com/bmabey/pyLDAvis">interactive LDAviz tool</a></i></center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the <a href="https://github.com/bmabey/pyLDAvis">interactive LDAviz tool</a></i></center>  
+
 
 #### -- CLASSIFICATION
--- With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
+With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
 
 <!-- ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png) -->
 <img src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Classification_Model.png" center>
@@ -98,21 +101,21 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
    	<msubsup><mi>Difficulty</mi> <mi>0=more_challenging</mi> <mi>1=easy</mi></msubsup> 
 </math> -->
 
--- Ensemble ([Gradient-boosted & Random Forest](https://discuss.analyticsvidhya.com/t/what-is-the-fundamental-difference-between-randomforest-and-gradient-boosting-algorithms/2341)) [classification](http://www.saedsayad.com/decision_tree.htm) [Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052) and [Logistic Regression](http://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html) Models with different [regularization e.g. Lasso(L1) & Ridge(L2)](https://www.quora.com/Using-logistic-regression-and-L1-L2-regularization-do-I-have-to-care-about-features-selection) parameters were compared.
+Ensemble ([Gradient-boosted & Random Forest](https://discuss.analyticsvidhya.com/t/what-is-the-fundamental-difference-between-randomforest-and-gradient-boosting-algorithms/2341)) [classification](http://www.saedsayad.com/decision_tree.htm) [Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052) and [Logistic Regression](http://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html) Models with different [regularization e.g. Lasso(L1) & Ridge(L2)](https://www.quora.com/Using-logistic-regression-and-L1-L2-regularization-do-I-have-to-care-about-features-selection) parameters were compared.  
 
 
 #### --	TESTING-VALIDATING
--- To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
+To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
 
--- To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
+To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
 
--- The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):
+The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):
 
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: <a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg">Wikipedia</a></i> </center>   
 
 <br>
 
--- The different models do comparably well after tuning for their respective parameters (e.g. learning rate, number of trees, training features etc.) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
+The different models do comparably well after tuning for their respective parameters (e.g. learning rate, number of trees, training features etc.) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
 
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/ClassificationOutcomes.png)<center>FIG6: <i>Comparison of classification outcomes on hold-out data</i></center>
@@ -161,13 +164,14 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
 
 <br>
 
-Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/). 
+Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/).   
 
+<p> </p>
 
 > ### Some thoughts on how to further improve and extend the work here... 
 
 
-### APPLICATION EXTENSIONS:
+#### APPLICATION EXTENSIONS:
 
 -- One could apply the <!--same techniques-->recipe-difficulty-tagger to other (online and/or analog) recipe collection. <!--e.g. NYT Cooking etc.-->  
   
@@ -175,7 +179,7 @@ Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serv
 
 -- Since the concept of ‘difficulty’ may be subjective, one could potentially personalize the MenuHelper app to track your culinary adventures over time. This in turn might mean that personal perspectives on what is subjectively easy or challenging could fine-tune the recipe-difficulty-tagger model to fit your level of comfort and may be used to suggest more challenging alternatives should you feel up for it. 
 
-### ROOM for IMPROVEMENTs in data and modeling pipelines:
+#### ROOM for IMPROVEMENTs in data and modeling pipelines:
 
 -- The [issue of unbalanced class proportion](https://svds.com/learning-imbalanced-classes/)<sup>sample-issue</sup> and modeling could be further assessed with [stratified k-fold cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html) on the training data, adapting the data resampling with bootstrap aggregating (‘bagging’), or indeed adjusting the class-weights.
 
@@ -187,7 +191,9 @@ I look forward to trying out some of these ideas and sharing updates on another 
 
 Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbcgoodfood.com/) why not give the [MenuHelper](bit.ly/menuplannerhelper) App a go! You never know, there could be an easier or similarly delectable recipe that could help simplify your holiday festive meal preparation. 
 
-### *Until next time, Happy Holidays to all!*
+<p> </p>
+
+#### *Until next time, Happy Holidays to all!*
 
 <br>
 <br>
