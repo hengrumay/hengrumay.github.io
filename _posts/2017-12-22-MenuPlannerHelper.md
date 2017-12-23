@@ -70,7 +70,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: <i>Examples of the varying distributions of Ingredient topics associated with each recipe</i></center>
 
-![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the [interactive LDAviz tool](https://github.com/bmabey/pyLDAvis)</i></center>
+![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the <a href="https://github.com/bmabey/pyLDAvis">interactive LDAviz tool</a></i></center>
 
 ### -- CLASSIFICATION
 -   With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
@@ -104,7 +104,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 -	To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
 -	To assess the different models, 20% of sample data was held for final testing, and the remaining 80% was further split into 70% for model training and 30% for model development-testing.
 -	The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):   
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg)</i> </center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px" align="center"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: <a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg">Wikipedia</a></i> </center>
 
 -	The different models do comparably well after tuning for their respective parameters (e.g. learning rate | number of trees | training features) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
 
