@@ -23,7 +23,9 @@ When festivities and inherent traditions place us under time, logistical and res
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/NotAllRecipesCreatedEqual.png)<center>FIG1: <i>The many ways that make each recipe different</i></center>
 
 Interestingly, as I sifted through various sources of recipes the information about its preparation difficulty is not always available, nor is it often explicitly stated. It is possible that how difficult a recipe is may depend on your cooking experience, and it might be best left to self-discovery. Yet basic and advanced cooking classes exist, so it might be worth asking:  
+
 > ### Could we learn from available recipes that are already categorized for their relative difficulty, which aspects or features contribute to their preparation ease or complexity? 
+
 
 <br>
 
@@ -151,7 +153,7 @@ Apart from classifying recipes for their difficulty, I was also interested in pr
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
 
 <center>
-  <video controls width="800" height="600">
+  <video controls width="900" height="700">
    <source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mov" type="video/mp4">
   </video>
 </center>	
@@ -201,21 +203,19 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 <br>
 
 ----
-
 ##### *Postcript*:  
 *The use of recipes as a motivating dataset for exploring topic-modeling and application development may seem frivolous. However, the methods, learning algorithms, and ideas integrated in the work described here have applications that can be extrapolated to other domains and problems that deal with unstructured text information or others requiring feature engineering.*
 
-----
 
 <br>
 
 _____  
-
+----
 ##### _FOOTNOTES:_ 
 
-<b><sup>LDA:</sup></b> An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)](https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
+<b>LDA:</b> An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)](https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
 
-<b><sup>Dir:</sup><b/> The "Dirichlet" distribution describes a distribution of distributions.
+<b>Dir:<b/> The "Dirichlet" distribution describes a distribution of distributions.
 
 <b><sup>Ntopics:</sup><b/> A more objective way to determine the 'optimal' number of topics for a corpus of documents is through cross-validating a model's [perplexity](https://en.wikipedia.org/wiki/Perplexity) -- *the measure of how well a probability model predicts a data sample*. An overview of [applying this heuristic](https://doi.org/10.1186/1471-2105-16-S13-S8) using the [ldatuning R package](https://cran.r-project.org/web/packages/ldatuning/index.html) is given [here](http://ellisp.github.io/blog/2017/01/05/topic-model-cv), and a tutorial using the [Text Mining and Topic Modeling Toolkit for Python](https://github.com/WZBSocialScienceCenter/tmtoolkit) can be found [here](https://datascience.blog.wzb.eu/2017/11/09/topic-modeling-evaluation-in-python-with-tmtoolkit/)  
 
