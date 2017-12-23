@@ -2,7 +2,7 @@
 layout: post
 title: How to simplify your holiday festive meal planning 
 subtitle: A Recipe-Diffficulty-Tagger and the MenuPlannerHelper App to the rescue!
-date: 2017-12-22 16:11:27
+date: 2017-12-22 18:55:24
 author: h-rm
 comments: true
 published: true
