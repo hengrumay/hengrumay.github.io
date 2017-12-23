@@ -147,15 +147,15 @@ Apart from classifying recipes for their difficulty, I was also interested in pr
 -->
 Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menuplannerhelper) App!
 
-<!-- <video controls width="800" height="600" align="center">
+<video controls width="800" height="600" align="center">
 	<source src="https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuHelper_v13.mp4" type="video/mp4">
   <!--<source src="videos/real-estate.mp4" type="video/mp4">-->
   <!--<source src="videos/real-estate.ogv" type="video/ogg">-->
-<!-- </video> -->
+</video> 
 
 <!-- <center>VIDEO DEMO: *The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and hosted on [AWS](https://aws.amazon.com/)*</center> -->
 
-[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The [MenuHelper](https://bit.ly/menuplannerhelper) app is built with [Flask](http://flask.pocoo.org/docs/0.12/), [bootstrap](http://getbootstrap.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)</i> 
+[![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/MenuPlannerHelper_AppDemo.png)](https://bit.ly/menuplannerhelper)<center>FIG8: <i>The <a href="https://bit.ly/menuplannerhelper">MenuHelper</a> app is built with <a href="http://flask.pocoo.org/docs/0.12/">Flask, <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></i> 
 < TRY to embed demo video > 
 </center>  
 
@@ -192,15 +192,15 @@ Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbc
 <br>
 <br>
 
---
+----
 ##### *Postcript*: 
 *The use of recipes as a motivating dataset for exploring topic-modeling and application development may seem frivolous. However, the methods, learning algorithms, and ideas integrated in the work described here have applications that can be extrapolated to other domains and problems that deal with unstructured text information or others requiring feature engineering.*
+----
 
-
-
---
 <br>
-====  
+
+_____  
+
 ##### _FOOTNOTES:_ 
 
 **<sup>LDA:</sup>** An unfortunate sharing of acronym: Latent Dirichlet Allocation (LDA) is distinct from [Linear Discriminant Analysis (LDA)] (https://en.wikipedia.org/wiki/Linear_discriminant_analysis), an algorithm that seeks to find a linear combination of features characterizing or separating two or more classes of objects or events.
