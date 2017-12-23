@@ -38,7 +38,8 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 #### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*  
 <!--##`< Create a DIV to HIDE and SHOW the details >`-->
-####  
+<p> </p>
+
 #### -- DATA
 Relative to many online recipes, [BBC Good Food](https://www.bbcgoodfood.com/) has a decent collection of recipes with information on the difficulty of a recipe. 
 	
