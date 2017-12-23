@@ -34,14 +34,14 @@ Interestingly, as I sifted through various sources of recipes the information ab
 
 
 
-#### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*
+#### Details of *i) building a Recipe-Difficulty-Tagger* and *ii) developing the MenuPlannerHelper App*  <br>
 <!--##`< Create a DIV to HIDE and SHOW the details >`-->
 
 #### -- DATA
 Relative to many online recipes, [BBC Good Food](https://www.bbcgoodfood.com/) has a decent collection of recipes with information on the difficulty of a recipe. 
 	
 I coded a web-recipe scrapper to automatically scrap all available (~10,000 at the time of scraping) recipes from [BBCgoodfood.com](https://www.bbcgoodfood.com/). This included information on Ingredients, Instructions, as well as additional recipe information e.g. difficulty, preparation time, etc.  
-
+<br>
 
 #### -- PRE-PROCESSING
 Like numerical data, text data also requires some form of “pre-processing”, which aims to clean up information that is not task-relevant and/or to restructure the data for subsequent analyses. To this end, I employed techniques from Natural Language Processing (NLP), which can be appreciated as the union of Artificial Intelligence (AI) and linguistics. NLP involves developing and using algorithmic and/or probablistic analysis of written language to automatically derive some insights from text data. 
@@ -51,7 +51,7 @@ In particular, I borrowed the [Conditional-Random-Field Ingredient Phrase Tagger
 Among various tweaks to the publicly available [NYT ingredient phrase tagger code](https://github.com/NYTimes/ingredient-phrase-tagger) given the different data structure between [NYT Cooking](https://cooking.nytimes.com/) vs [BBC Good Food](https://www.bbcgoodfood.com/) recipes, as well as what might be deemed as collective unit terms e.g. ‘clove’, ‘bushel’, ‘pinch’, I also modified the NYT Ingredient Phrase Tagger utility code to account for metric units, since the recipes from [BBC Good Food](https://www.bbcgoodfood.com/) are written in British rather than American English. 
 
 Subsequently, the recipe ingredient and instruction text data were [tokenized](https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html), i.e. they went through an algorithmic process that breaks down strings of words into its linguistic components e.g. words vs. non-words, parts-of-speech etc. so you could choose to keep only those elements of interest.   
-
+<br>
 
 #### -- TOPIC-MODELING
 Next, I performed ***topic-modeling*** --- an un-supervised machine learning approach that discovers the associations between words, topics, and documents using [Latent Dirichlet Allocation (LDA)](http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)<sup>LDA</sup>.
@@ -73,7 +73,7 @@ https://stats.stackexchange.com/questions/295506/lda-topics-number-determining-t
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_ingredTopics.png)<center>FIG3: <i>Examples of the varying distributions of Ingredient topics associated with each recipe</i></center>
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/LDA_instructTopics.png)<center>FIG4: <i>An illustrative snapshot of Instruction topics visualized using the <a href="https://github.com/bmabey/pyLDAvis">interactive LDAviz tool</a></i></center>  
-
+<br>
 
 #### -- CLASSIFICATION
 With the LDA ingredient and instructions topics derived, I assessed a few Classification Models that included the probabilistic topic-word association matrices as input features to predict recipe difficulty (‘easy’ vs. ‘more challenging’). The general model takes the form (also shown in FIG2.): 
@@ -102,7 +102,7 @@ With the LDA ingredient and instructions topics derived, I assessed a few Classi
 </math> -->
 
 Ensemble ([Gradient-boosted & Random Forest](https://discuss.analyticsvidhya.com/t/what-is-the-fundamental-difference-between-randomforest-and-gradient-boosting-algorithms/2341)) [classification](http://www.saedsayad.com/decision_tree.htm) [Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052) and [Logistic Regression](http://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html) Models with different [regularization e.g. Lasso(L1) & Ridge(L2)](https://www.quora.com/Using-logistic-regression-and-L1-L2-regularization-do-I-have-to-care-about-features-selection) parameters were compared.  
-
+<br>
 
 #### --	TESTING-VALIDATING
 To address the uneven proportion<sup>sample-issue</sup> of recipes for each difficulty category, the number of easy recipes was downsampled to match those of the ‘more-challenging’ recipes. <!--*#* (see *** for other ways to deal with uneven data samples) -->
@@ -112,7 +112,6 @@ To assess the different models, 20% of sample data was held for final testing, a
 The outcome metrics of interest here were area under the curve, as well as precision (% of selected items that are relevant) and recall (% of relevant items selected, also commonly known as '*sensitivity*'):
 
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" height="600px"> </center><center>FIG5: <i>Precision and Recall, illustrated -- credit: <a href="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg">Wikipedia</a></i> </center>   
-
 <br>
 
 The different models do comparably well after tuning for their respective parameters (e.g. learning rate, number of trees, training features etc.) with K-fold cross-validation. The 2 best performing models: `Logistic_Regression1_lasso` and `gradboostedTrees` yielded comparable recall and precision metrics ~84—86%, as seen in the confusion matrices below. 
@@ -165,10 +164,10 @@ Below is an early version demo of the [MenuPlannerHelper](https://bit.ly/menupla
 <br>
 
 Happily, the ***Recipe-Difficulty-Tagger*** and ***MenuPlannerHelper App*** serve as decent working proof-of-concepts and can indeed be used with the current recipe collection from [BBCgoodfood.com](https://www.bbcgoodfood.com/).   
+<br>
 
-<p> </p>
 
-> ### Some thoughts on how to further improve and extend the work here... 
+> ### Some thoughts on how to further improve and extend the work here... <br>
 
 
 #### APPLICATION EXTENSIONS:
@@ -191,10 +190,11 @@ I look forward to trying out some of these ideas and sharing updates on another 
 
 Meanwhile, if you find yourself using recipes from [BBCgoodfood](https://www.bbcgoodfood.com/) why not give the [MenuHelper](bit.ly/menuplannerhelper) App a go! You never know, there could be an easier or similarly delectable recipe that could help simplify your holiday festive meal preparation. 
 
-<p> </p>
+<br>
 
 #### *Until next time, Happy Holidays to all!*
 
+<br>
 <br>
 <br>
 
