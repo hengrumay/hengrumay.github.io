@@ -130,7 +130,7 @@ The different models do comparably well after tuning for their respective parame
 <br>
 
 ### FEATUREs contributing to recipe difficulty 
-With our classification models yeilding reasonable [precision and recall](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg) metrics, we could start to probe into features contributing to a recipe's preparation ease or complexity: 
+With our classification models yielding reasonable [precision and recall](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg) metrics, we could start to probe into features contributing to a recipe's preparation ease or complexity: 
 
 ![](https://raw.githubusercontent.com/hengrumay/hengrumay.github.io/master/_posts/MenuPlannerHelper/Recipe-Difficulty.png)<center>FIG7: <i>Features (normalized) contributing to making a recipe 'easy' or 'more challenging'</i></center>  
 
