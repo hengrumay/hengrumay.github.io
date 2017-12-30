@@ -697,7 +697,7 @@ animation:fadeIn 10s infinite;
 }
 #portfolio-work .block .portfolio-contant ul li {
   float: left;
-  width: 30%; /*32.22%;*/
+  width: 32.22%; 
   overflow: hidden;
   margin: 6px; 
   position: relative;
