@@ -141,7 +141,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	ABOUT || wrapper Start
 --*/
 #intro {
-  padding: 10px 0 10px 0; 
+  padding: 0px 10px 0px 10px; 
   /* margin-bottom: 10px; */	
   /* max-height:200px; */	  
 }
