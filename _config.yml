@@ -30,10 +30,10 @@ markdown: kramdown
 
 # “includes”:
 include: ["_pages"]
+include: ["_posts"]
 
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
-ga_tracking_id: "UA-112023124-1"
+# Google Analytics
+google_analytics: UA—112023124-1
 
 # Category descriptions (for archive pages)
 descriptions:
