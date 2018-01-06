@@ -1,6 +1,8 @@
 #### Infomation about this website:
 
-[hengrumay.github.io](hengrumay.github.io) is my personal site built using <a href="https://pages.github.com/" target="_blank">github pages</a>. *It is an ongoing work-in-progress.*  
+[hengrumay.github.io](hengrumay.github.io) is my personal site built using <a href="https://pages.github.com/" target="_blank">github pages</a>.  
+
+*It is an ongoing work-in-progress.*  
 
 The general template is based off of the *Airspace Theme* by <a href="http://www.themefisher.com" target="_blank">Themefisher</a>, 
 and royalty-free images are sourced from <a href="http://www.freepik.com" target="_blank">freepik</a> | 
