@@ -9,7 +9,8 @@ We used a combination of speech recognition and natural language processing, tog
 Here are some highlights: 
 
 ##### i) [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
-click image to watch demo @ BBC World   [![Demo-video](https://hengrumay.github.io/img/projects/bbc100women_all-ai_appDemo.png)](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings)
+click image to watch demo @ BBC World   
+>> [![Demo-video](https://hengrumay.github.io/img/projects/bbc100women_all-ai_appDemo.png)](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings)
 
 ##### ii) [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions revealed at Facebook-HQ in SF  
 
