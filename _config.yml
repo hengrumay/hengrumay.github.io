@@ -30,7 +30,6 @@ markdown: kramdown
 
 # “includes”:
 include: ["_pages"]
-include: ["_posts"]
 
 # Google Analytics
 google_analytics: UA—112023124-1
