@@ -4,7 +4,7 @@
 
 *It is an ongoing work-in-progress.*  
 
-The general template is based off of the *Airspace Theme* by <a href="http://www.themefisher.com" target="_blank">Themefisher</a>, 
+The general template is based on the *Airspace Theme* by <a href="http://www.themefisher.com" target="_blank">Themefisher</a>, 
 and royalty-free images are sourced from <a href="http://www.freepik.com" target="_blank">freepik</a> | 
           <a href="http://unsplash.com" target="_blank">unsplash</a> | 
           <a href="https://commons.wikimedia.org/wiki/Main_Page" target="_blank">wikimedia</a>.    
