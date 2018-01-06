@@ -15,7 +15,7 @@ keep_files:
 
 # Site settings
 title: h-rm
-subtitle: "website in the making"
+subtitle: "personal site | porfolio | data musings"
 url: "https://hengrumay.github.io" # the base hostname & protocol for your site
 
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
@@ -33,6 +33,7 @@ include: ["_pages"]
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: "UA-112023124-1"
 
 # Category descriptions (for archive pages)
 descriptions:
@@ -43,6 +44,12 @@ descriptions:
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
 
+plugins:
+   - jekyll-mentions
+   - jemoji
+   - jekyll-redirect-from
+   - jekyll-sitemap
+   - jekyll-feed
 
 #
 # !! You don't need to change any of the configuration flags below !!
