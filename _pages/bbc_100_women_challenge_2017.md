@@ -1,4 +1,4 @@
-### BBC 100 Women Challenge
+#### BBC 100 Women Challenge
 
 I have always been interested in using technology, data, and science in meaningful ways as well as contributing to social good =) 
 
@@ -8,13 +8,12 @@ We used a combination of speech recognition and natural language processing, tog
 
 #### Here are some highlights: 
 
-##### i) [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
-click image to watch demo @ BBC World   
->> [![Demo-video](https://hengrumay.github.io/img/projects/bbc100women_all-ai_appDemo.png)](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings)
+- i) [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
+click image to watch demo @ BBC World   [![Demo-video](https://hengrumay.github.io/img/projects/bbc100women_all-ai_appDemo.png)](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings)
 
-##### ii) [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions revealed at Facebook-HQ in SF  
+- ii) [VIDEO:](https://www.facebook.com/BBC100women/videos/1537111543020785/) Final day challenge solutions revealed at Facebook-HQ in SF  
 
-##### iii) Documentary Broadcast: Aired on BBC World News TV over the weekend of 18/19th Nov 2017
+- iii) Documentary Broadcast: Aired on BBC World News TV over the weekend of 18/19th Nov 2017
  
 
 
