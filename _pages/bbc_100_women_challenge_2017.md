@@ -1,4 +1,4 @@
-#### BBC 100 Women Challenge
+### BBC 100 Women Challenge
 
 I have always been interested in using technology, data, and science in meaningful ways as well as contributing to social good =) 
 
@@ -6,7 +6,7 @@ Most recently I contributed remotely from Denver, CO, to the [BBC 100 Women Chal
 
 We used a combination of speech recognition and natural language processing, together with requisite data extraction, transformation, and web application development to create this proof-of-concept *gender-neutral* app within ~3 intense days. The fun and camaraderie made the experience truly memorable!   
 
-Here are some highlights: 
+#### Here are some highlights: 
 
 ##### i) [DEMO:](http://www.bbc.com/news/av/world-41531054/100-women-an-app-to-help-you-speak-up-in-meetings) all-ai -- an app to empower    
 click image to watch demo @ BBC World   
