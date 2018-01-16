@@ -1,4 +1,4 @@
-#### Infomation about this website:
+#### Information about this website:
 
 [hengrumay.github.io](/) is my personal site built using <a href="https://pages.github.com/" target="_blank">github pages</a>.  
 
