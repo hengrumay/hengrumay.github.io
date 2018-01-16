@@ -1,6 +1,6 @@
 #### Infomation about this website:
 
-[hengrumay.github.io](hengrumay.github.io) is my personal site built using <a href="https://pages.github.com/" target="_blank">github pages</a>.  
+[hengrumay.github.io](/) is my personal site built using <a href="https://pages.github.com/" target="_blank">github pages</a>.  
 
 *It is an ongoing work-in-progress.*  
 
